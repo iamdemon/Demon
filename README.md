@@ -8,3 +8,4 @@ Server code link : https://drive.google.com/open?id=1IGDTn7ssv3APJKW9yG12CloRLAF
 
 Computer vision code :- https://drive.google.com/open?id=1k3rz_dYLe8kHSZJ3ZqrbfsRW2ewH2ICn
 
+PPT link :- https://drive.google.com/open?id=1CchQ53sUUaXyLjhiHNRBt2MdT3U3rO22

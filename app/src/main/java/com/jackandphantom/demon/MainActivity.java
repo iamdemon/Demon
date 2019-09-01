@@ -22,11 +22,11 @@ import java.net.InetAddress;
 import java.net.Socket;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    Button previous, play, next,p,n,q,w,e,r,t,y,u,i,o,a,s,d,f,g,h,j,k,l,z,x,c,v,b,alt,shift,arrow_up,arrow_down,enter;
     Context context;
-    Button playPauseButton;
-    Button nextButton;
-    Button previousButton;
+    TextView playPauseButton;
+    TextView nextButton;
+    TextView previousButton;
     TextView mousePad;
 
     private boolean isConnected=false;
@@ -42,14 +42,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout);
 
         context = this; //save the context to show Toast messages
 
         //Get references of all buttons
-        playPauseButton = (Button)findViewById(R.id.playPauseButton);
-        nextButton = (Button)findViewById(R.id.nextButton);
-        previousButton = (Button)findViewById(R.id.previousButton);
+        p = (Button) findViewById(R.id.p);
+        n = (Button) findViewById(R.id.n);
+        q = (Button) findViewById(R.id.q);
+        w = (Button) findViewById(R.id.w);
+        e = (Button) findViewById(R.id.e);
+        arrow_up = (Button) findViewById(R.id.arrow_up);
+        r = (Button) findViewById(R.id.r);
+        t = (Button) findViewById(R.id.t);
+        y = (Button) findViewById(R.id.y);
+        u = (Button) findViewById(R.id.u);
+        i = (Button) findViewById(R.id.i);
+        o = (Button) findViewById(R.id.o);
+        a = (Button) findViewById(R.id.a);
+        s = (Button) findViewById(R.id.s);
+        d = (Button) findViewById(R.id.d);
+        f = (Button) findViewById(R.id.f);
+        g = (Button) findViewById(R.id.g);
+        h = (Button) findViewById(R.id.h);
+        j = (Button) findViewById(R.id.j);
+        k = (Button) findViewById(R.id.k);
+        l = (Button) findViewById(R.id.l);
+        z = (Button) findViewById(R.id.z);
+        x = (Button) findViewById(R.id.x);
+        c = (Button) findViewById(R.id.c);
+        v = (Button) findViewById(R.id.v);
+        b = (Button) findViewById(R.id.b);
+        alt = (Button) findViewById(R.id.alt);
+        shift = (Button) findViewById(R.id.shift);
+        arrow_down = (Button) findViewById(R.id.arrow_down);
+        enter = (Button) findViewById(R.id.arrow_enter);
+        playPauseButton = findViewById(R.id.mouse_right);
+        nextButton = findViewById(R.id.mouse_left);
+       // previousButton = (Button)findViewById(R.id.mousepad);
 
         //this activity extends View.OnClickListener, set this as onClickListener
         //for all buttons
@@ -67,10 +97,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         nextButton.setOnClickListener(this);
-        previousButton.setOnClickListener(this);
+//        previousButton.setOnClickListener(this);
 
         //Get reference to the TextView acting as mousepad
-        mousePad = (TextView)findViewById(R.id.mousePad);
+        mousePad = (TextView)findViewById(R.id.mousepad);
 
         //capture finger taps and movement on the textview
         mousePad.setOnTouchListener(new View.OnTouchListener() {
@@ -116,6 +146,553 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
             }
         });
+
+
+        p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.P);
+                        }
+                    }).start();
+
+
+                }
+
+
+            }
+        });
+
+        n.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.N);
+                        }
+                    }).start();
+
+
+                }
+
+
+            }
+        });
+
+        q.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.Q);
+                        }
+                    }).start();
+                }
+
+
+            }
+        });
+
+        w.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.W);
+                        }
+                    }).start();
+
+
+                }
+
+
+            }
+        });
+
+        e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.E);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        r.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.R);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        t.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.T);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        y.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.Y);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        u.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.U);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        i.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.I);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        o.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.O);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.A);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        s.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.S);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.D);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        f.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.F);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        g.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.G);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        h.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.H);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        j.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.J);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        k.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.K);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        l.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.L);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        z.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.Z);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        x.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.X);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.C);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.V);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.B);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        alt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.ALT);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        arrow_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.UP);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        arrow_down.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.DOWN);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+        shift.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.SHIFT);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+
+        enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isConnected && out != null) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            out.println(Constants.ENTER);
+                        }
+                    }).start();
+
+                }
+
+
+            }
+        });
+
+
     }
 
 
